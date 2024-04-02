@@ -53,7 +53,7 @@ function onSearch(evt) {
         .catch(err => console.log(err))
         .finally(() => loader.hidden = true)
 
-    evt.currentTarget.reset();
+    form.reset();
 }
 
 // createGalleryMarkup()
