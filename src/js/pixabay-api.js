@@ -30,6 +30,12 @@ export default function onSearch(searchQuery) {
             };
             createGalleryMarkup(data.hits)
         })
-        .catch(err => console.log(err))
+        .catch(err => {
+            iziToast.error({
+                title: "Error",
+                position: "topRight",
+                message: `Oops! Something went wrong!`,
+            });
+        })
         .finally(() => loader.hidden = true)
 }

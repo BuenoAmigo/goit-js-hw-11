@@ -36,8 +36,7 @@ export function createGalleryMarkup(arr) {
     </div>`).join("");
 
     galleryList.insertAdjacentHTML('afterbegin', markup);
-
-    new SimpleLightbox('.gallery a',
+    let gallery = new SimpleLightbox('.gallery a',
         {
             captionsData: 'alt',
             captionDelay: 250,
@@ -45,4 +44,6 @@ export function createGalleryMarkup(arr) {
             widthRatio: 0.9,
             heightRatio: 0.8,
         });
+    gallery.refresh()
 }
+

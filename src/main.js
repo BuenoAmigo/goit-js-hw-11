@@ -23,3 +23,4 @@ function onFormSubmit(evt) {
     onSearch(searchQuery);
     form.reset();
 }
+
